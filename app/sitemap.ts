@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const currentDate = new Date();
 
     return [
+        // Home Page - Highest Priority
         {
             url: baseUrl,
             lastModified: currentDate,
@@ -13,10 +14,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 1.0,
             alternates: {
                 languages: {
+                    "ar-SA": baseUrl,
                     ar: baseUrl,
                 },
             },
         },
+        // Privacy Policy Page
         {
             url: `${baseUrl}/privacy`,
             lastModified: currentDate,
@@ -24,10 +27,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.5,
             alternates: {
                 languages: {
+                    "ar-SA": `${baseUrl}/privacy`,
                     ar: `${baseUrl}/privacy`,
                 },
             },
         },
+        // Terms & Conditions Page
         {
             url: `${baseUrl}/terms`,
             lastModified: currentDate,
@@ -35,6 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.5,
             alternates: {
                 languages: {
+                    "ar-SA": `${baseUrl}/terms`,
                     ar: `${baseUrl}/terms`,
                 },
             },
